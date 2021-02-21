@@ -1,14 +1,23 @@
 {
+    "data_path": "D:\\videos",
     "store_time": 259200,
-    "video_duration": 360,
-    "data_path": "D:\\data",
-    "clean_interval": 360,    
+    "video_duration": 3600,
+    "clean_interval": 3600,  
     "cameras": [
         {
             "protocal": "rtsp",
             "ip": "192.168.1.4",
             "port": "554",
-            "name": "kh_quan_1",
+            "name": "cam_1",
+            "account": "admin",
+            "password": "xxx",
+            "sub_url": "/H.264"
+        },
+        {
+            "protocal": "rtsp",
+            "ip": "192.168.1.5",
+            "port": "554",
+            "name": "cam_2",
             "account": "admin",
             "password": "xxx",
             "sub_url": "/H.264"
