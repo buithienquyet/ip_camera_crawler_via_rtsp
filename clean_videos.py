@@ -3,8 +3,6 @@ import datetime
 import os
 import json
 
-sleep_time = 60*60
-
 
 def load_config():
     with open("config.json") as f:
@@ -18,7 +16,7 @@ def clear():
     now_timestamp = datetime.datetime.timestamp(now)
     clean_cnt = 0
 
-    print('processing at '+ now)
+    print('processing at ' + now)
     for camera in config["cameras"]:
         try:
             video_path = os.path.join(config["data_path"], camera["name"])
@@ -33,13 +31,14 @@ def clear():
         except Exception as ex:
             print("error when processing camera {}: {}".format(
                 camera["name"], ex))
-    if clean_cnt>0:
-        print('total clean: '+ clean_cnt)
+    if clean_cnt > 0:
+        print('total clean: ' + clean_cnt)
     else:
         print('no files to clean')
 
 
 if __name__ == "__main__":
+    config = load_config()
     while True:
         clear()
-        time.sleep(sleep_time)
+        time.sleep(config["clean_interval"])

@@ -1,6 +1,7 @@
 {
     "store_time": 259200,
-    "data_path": "",
+    "data_path": "D:\\data",
+    "clean_interval": 360,
     "cameras": [
         {
             "protocal": "rtsp",
