@@ -1,7 +1,8 @@
 {
     "store_time": 259200,
+    "video_duration": 360,
     "data_path": "D:\\data",
-    "clean_interval": 360,
+    "clean_interval": 360,    
     "cameras": [
         {
             "protocal": "rtsp",

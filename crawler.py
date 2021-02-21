@@ -20,8 +20,8 @@ if __name__ == "__main__":
                 video_path = os.path.join(config["data_path"], camera["name"])
                 if not os.path.exists(video_path):
                     os.mkdir(video_path)
-                cmd = "ffmpeg -i {} -c copy -f segment -strftime 1 -segment_time 60 \"{}/%Y_%m_%d_%H-%M-%S.mp4\"".format(
-                    rtsp_url, video_path)
+                cmd = "ffmpeg -i {} -c copy -f segment -reset_timestamps 1 -strftime 1 -segment_time {} \"{}/%Y_%m_%d_%H-%M-%S.mp4\"".format(
+                    rtsp_url, config["video_duration"], video_path)
                 subprocess.Popen(shlex.split(cmd))
         except Exception as ex:
             print("error when processing camera {}: {}".format(
