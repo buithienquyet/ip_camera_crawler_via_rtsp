@@ -1,0 +1,15 @@
+{
+    "store_time": 259200,
+    "data_path": "",
+    "cameras": [
+        {
+            "protocal": "rtsp",
+            "ip": "192.168.1.4",
+            "port": "554",
+            "name": "kh_quan_1",
+            "account": "admin",
+            "password": "xxx",
+            "sub_url": "/H.264"
+        }
+    ]
+}
