@@ -16,7 +16,7 @@ def clear():
     now_timestamp = datetime.datetime.timestamp(now)
     clean_cnt = 0
 
-    print('processing at ' + now)
+    print("processing at {}".format(now))
     for camera in config["cameras"]:
         try:
             video_path = os.path.join(config["data_path"], camera["name"])
